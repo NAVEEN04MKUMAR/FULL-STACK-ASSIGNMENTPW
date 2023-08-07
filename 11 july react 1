@@ -1,0 +1,11 @@
+85 Create a co6ponent na6ed "Person" that takes two props - "na6e" and "age". The co6ponent should
+display the persons na6e and age in a paragraph ele6ent5
+
+5 Create a co6ponent na6ed "Button" that takes two props - "text" and "onClick". The co6ponent should
+display a utton ele6ent with the gi2en text and call the onClick function when clicked5
+
+5 Create a co6ponent na6ed "Header" that takes one prop - "title". The co6ponent should display a header
+ele6ent with the gi2en title5
+
+15 Create a co6ponent na6ed "List" that takes one prop - "ite6s". The co6ponent should display an
+unordered list ele6ent with the gi2en list ite6s.
