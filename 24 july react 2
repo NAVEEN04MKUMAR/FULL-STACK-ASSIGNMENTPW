@@ -1,0 +1,47 @@
+1: CreaNing a User Page like InsNagram using ReacN FuncNionaliNies
+AssignmenN DescripNion:
+In this assign5ent, you will create a user page si5ilar to Instagra5 using eact functionalities. The pri5ary task
+is to i5ple5ent conditional rendering, allowing users to either sign up or log in depending on their choice. The
+user interface should show different input fields based on their selection. If they choose to sign up, additional
+inputs for registration will be displayed. On the other hand, if they opt for login, only the basic userna5e and
+password inputs should be visible(
+RequiremenNs4
+M' Create a eact application fro5 scratch or use an eisting one'
+' I5ple5ent conditional rendering to toggle between sign up and login views'
+' Design the user interface with a clean and intuitive layout si5ilar to Instagra5. Check below i5age for Your
+eference
+
+s. A well-organized eact application with clear co5ponent structure
+. The user interface should display the following co5ponents:
+a. Instagra5 Logo
+b. A button to switch between sign up and login views
+c. Basic input fields for userna5e and password
+d. If the user chooses to sign up, additional input fields for na5e, e5ail, etc., should be displayed
+Guidelines4
+M' Start by setting up a new eact project or creating a new co5ponent for this assign5ent'
+' Use eact hookv
+' Leverage CSS or a CSS fra5ework to style the co5ponents and 5ake the user interface visually appealing'
+X' Test the application thoroughly to ensure all functionalities work as epected'
+V' Docu5ent your code to eplain any co5ple logic or reasoning behind your i5ple5entation.
+AssignmenN
+
+Full Stack Web Development
+
+Submission9
+Submit the entire project folder containing all the necessary files and assets via the github repo. Include a brief
+OEADME file describing the assignment, any challenges faced, and the steps to run the application locally.
+Noae: This assignment is designed to assess your proficiency in Oeact and conditional rendering. Ensure that
+you follow best practices, write clean code, and create a user-friendly interface. Don't hesitate to ask for help or
+clarifications if needed. Good luck!
+
+2. Develop a web applicaaion using Reaca aCaa funcaions as a counaer.
+Include awo buaaons in aCe UI8
+`B Incremena button
+ On clicking this button, the counter value should be incremented by oneB
+NB Decremena button
+ On clicking this button, the counter value should be decremented by oneB
+ Implement the counter logic using Oeact's state managementB
+ Ensure that the counter value is displayed in the UI and updates in real-time when incremented or
+decrementedB
+ Use appropriate Oeact components and hooks to manage the counter state and handle button click events.
+See below for Oeference
