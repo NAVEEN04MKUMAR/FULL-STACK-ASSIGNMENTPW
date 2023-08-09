@@ -1,0 +1,43 @@
+
+Certainly! Here are four beginner-level challenges related to MySQL database concepts:
+
+Challenge 1: Data Retrieval and Filtering
+
+Objective: Practice writing basic SQL queries to retrieve and filter data from a database.
+
+Tasks:
+
+Retrieve the names of all customers from the "Customers" table.
+Display the product names and their corresponding prices from the "Products" table.
+Find the order ID, order date, and total amount for orders placed by a specific customer.
+List the names of employees who joined the company before a certain year.
+Challenge 2: Data Modification and Insertion
+
+Objective: Practice inserting, updating, and deleting records in a MySQL database.
+
+Tasks:
+
+Insert a new product into the "Products" table.
+Update the price of a specific product.
+Delete a customer record who has no orders.
+Increase the salary of all employees by a certain percentage.
+Challenge 3: Aggregation and Grouping
+
+Objective: Gain experience with aggregate functions and grouping in SQL.
+
+Tasks:
+
+Calculate the average price of all products.
+Find the total number of orders placed by each customer.
+Determine the highest and lowest salary among employees.
+Count the number of products in each category.
+Challenge 4: Joins and Relationships
+
+Objective: Practice performing joins between tables to retrieve related data.
+
+Tasks:
+
+Retrieve the product name and customer name for each order from the "OrderDetails," "Products," and "Customers" tables.
+List the employees along with their corresponding managers' names.
+Find the total revenue generated from orders for a specific customer.
+Display the product name, category, and supplier name for each product.
