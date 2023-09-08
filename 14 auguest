@@ -1,0 +1,28 @@
+In this mini project, you are required to create an image gallery using React5 The gallery should fetch a set of
+images from given api, limit the results to 20 images, and display them in a user-friendly UI5 Upon clicking on
+any photo, the user should be redirected to a single image view, where additional information, such as the title
+and description of the image, is shown.
+Re@uirements?
+! Create a new React application using create-react-app or any preferred React boilerplate4
+! Implement a gallery component that displays the first 20 images fetched from the server5 Each image
+should be displayed with a thumbnail and relevant details4
+! Add functionality to handle user interaction5 Clicking on any thumbnail in the gallery should redirect the user
+to a new page showing the single image in a larger view4
+! On the single image page, display the enlarged image along with its title and description4
+! Use React Router Dom to handle navigation between the gallery and single image view4
+! Ensure error handling for cases where the server request fails or returns no images.
+Api Documentation : Link
+React Image Gallery
+
+Full Stack Web Development
+
+Assignment
+
+Additional Notes<
+A Y=uNareNenc=uragedNt=NuseNanyNexternalNlibrariesN=rNCSSNframew=rksNifNnecessary#NP=pularNlibrariesNlikeNaxi=sN
+f=rNAPINrequestsM
+A RememberNt=NstructureNy=urNc=deNappr=priatelyNint=NreusableNc=mp=nentsNf=rNmaintainability"
+A Pr=videNclearNandNc=nciseNc=mmentsNthr=ugh=utNy=urNc=deNt=NexplainNc=mplexNl=gicN=rNfuncti=nality.
+Submission:
+CreateNaNGitHubNrep=sit=ryNf=rNy=urNpr=jectNandNshareNtheNlinkNwithNtheNassignmentNevaluat=r#NMakeNsureNt=N
+includeNclearNinstructi=nsN=nNh=wNt=NrunNy=urNapplicati=nNl=cally.
