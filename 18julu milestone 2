@@ -1,0 +1,86 @@
+Project d 3 Building PWSkills Blog using HTML, CSS, and JavaScript
+Objective3 I: this assig:me:t, you will create a blog applicatio: called "PWSkills Blog" usi:g HTML, CSS, a:d
+JavaScript. The applicatio: will allow users to add their ow: blogs a:d read a:y existi:g blog posts. To achieve
+this, all blogs' data will be stored i: the browser's LocalStorage`
+Reuirements2
+ The blog applicatio: should have two mai: pages: the home page a:d the blog page_
+ O: the home page, users should be able to see a list of all existi:g blog posts with their titles a:d brief
+summaries_
+ Users should be able to click o: a blog post to view its full co:te:t o: a separate page_
+ O: header There should be “+” ico: to add :ew blog by clicki:g o: that a modal should ope9
+ The add blog modal should have a form with fields to i:put the blog title, blog poster, descriptio: a:d blog
+co:te:t_
+ Upo: submitti:g the add blog form, the :ew blog post should be added to the list of existi:g blogs o: the
+home page, a:d the data should be stored i: the LocalStorage`
+E:sure that the applicatio: has a clea: a:d visually appeali:g desig: usi:g CSS`
+ote3 it's :ot ma:datory to make it respo:sive but i: case you wa:t to do so Feel Free to do so_
+c Homepage
+MileStone Exam
+
+Full Stack Web Development
+
+ Add Bog Moda
+
+( Read Bog age
+MieStone Exa)
+
+Full Stack Web Development
+Project 2: Build Simple Movie Search Web App Using HTML, CSS & JavaScript Only
+Objective:
+YourNassignmentNisNtoNcreateNaNmovieNsearchNapplicationNthatNallowsNusersNtoNsearchNforNannNmovieNusingNanN
+inputNbox.NUponNreceivingNtheNuser'sNinput,NtheNapplicationNshouldNfetchNmovieNdataNfromNtheNOMDBNAPINforNtheN
+specificNquernNandNdisplanNtheNrelevantNmovieNdetailsH
+Requirementsm
+TheNapplicationNshouldNhaveNaNsimpleNandNuser-friendlnNinterfaceNbuiltNusingNHTMLNandNCSSG
+YouNareNrequiredNtoNuseNJavaScriptNtoNhandleNuserNinteractionsNandNfetchNdataNfromNtheNOMDBNAPIG
+DisplanNtheNfetchedNmovieNdetailsNsuchNasNmovieNtitle,NposterNimageNonNtheNapplicationNinterfaceG
+HandleNedgeNcasesNgracefulln,NsuchNasNwhenNaNmovieNisNnotNfoundNorNtheNuserNprovidesNinvalidNinputH
+Instructionsm
+RegisterNonNtheNOMDBNAPINwebsiteNtoNobtainNnourNAPINken.NTheNAPINkenNwillNbeNrequiredNtoNmakeNrequestsNtoNtheN
+OMDBNAPIG
+SetNupNaNnewNHTMLNfileNandNnameNitN"index.html"G
+CreateNaNCSSNfileNnamedN"stnle.css"NtoNstnleNtheNapplicationG
+CreateNaNJavaScriptNfileNnamedN"script.js"NtoNimplementNtheNfunctionalitnG
+UseNtheNfetchNAPINinNJavaScriptNtoNrequestNmovieNdataNfromNtheNOMDBNAPINusingNtheNuser'sNinputNasNtheNsearchN
+quernG
+DisplanNtheNfetchedNmovieNdetailsNinNaNstructuredNandNvisuallnNappealingNmannerNonNtheNHTMLNpageH
+OMDB (API ! Documentm
+AdNinNthisNprojectNYou’dNhaveNtoNuseNanNapiNsoNmakeNsureNtoNgetNnourNdoubtsNclearNbnNgoingNthroughNtheN
+documentationNofNtheNapiNitselfM
+LinkN:Nhttps://www.omdbapi.com/
+MileStone Exam
+
+Full Stack Web Development
+Project 3: Create a Simple Todo /eb App with following features Using React
+ReXuirementsW
+. The bloK applGcatGon $hould have one maGn paKe$: the home paKeOn the home paKe, u$er$ $hould be able
+to $ee a lG$t of all exG$tGnK todo wGth theGr tGtle$ and $tatu#
+. An Gnput button where u$er$ can type theGr ta$k$" On clGckGnK the $ubmGt button, the entered ta$k $hould be
+dG$played Gn the UI!
+. U$er$ $hould be able to clGck on a update todo $tatu$ to update $tatu$ of todo pendGnK to completed &
+completed to pendGnJ
+. In todo card Gn footer there $hould be button to remove todo on clGckGnK that todo $hould be removed from
+uF
+. Before tGtle there $hould be todo number a$ $hown Gn the GmaKe
+En$ure that the applGcatGon ha$ a clean and vG$ually appealGnK de$GKn
+Note: Gt'$ not mandatory to make Gt re$pon$Gve but Gn ca$e you want to do $o Feel Free to do $o"
+MileStone Exam
+
+Full Stack Web Development
+
+MileStone Exam
+
+How to Submit Assignment
+Dear Students, Congratulations on embarking on this exciting coding project!
+In order to effectively organize and showcase your work,
+We kindly request you to create a repository that aligns with the following
+structure. Each project should have its dedicated folder within the repository,
+encapsulating all relevant code assets and resources.
+To ensure accessibility and ease of navigation, please remember to make
+your repository public.
+Moreover, we encourage you to demonstrate your commitment to clarity and
+transparency by crafting a descriptive and informative README file for each
+project.
+This README file should serve as a comprehensive guide to understanding the functionalities of your project.
+By clearly outlining the purpose, features, and potential benefits of your work, you will be providing valuable
+context to any interested parties who explore your repository.
