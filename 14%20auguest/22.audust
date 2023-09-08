@@ -1,0 +1,27 @@
+2/ For this assignment mo0ule, your task is to create a blog webpage. To begin, in this co0ing challenge, you
+nee0 to import tailwin0 CSS into the project. You are expecte0 to use only the typography properties
+provi0e0 by tailwin0 CSS to achieve the 0esire0 output 0escribe0 below.
+
+Q/ Moving forwar0 with the 0esign of our blog webpage, let's explore images, layouts, an0 bor0ers. By utili3ing
+the flex an0 bor0er properties offere0 by tailwin0 CSS, aim to achieve the 0esire0 output as 0escribe0
+below.
+
+n/ In this co0ing challenge, let's examine the fonts provi0e0 by tailwin0 CSS an0 explore some of the other text
+properties. Utili3e the properties offere0 by tailwin0 CSS to achieve the 0esire0 output 0escribe0 below.
+Assignmenu
+
+Full Stack Web Development
+
+0 In this coding challenge, let's e1lore the different variations of borders offered in CSS. Using the border
+roerties rovided by tailwind CSS, attemt to achieve the desired outut described below.
+
+O0 Continuing with the design of our blog webage, let's now delve into the grid layout. Utilize the grid layout
+roerties rovided by tailwind CSS to achieve the desired outut described below.
+
+e0 Sometimes, instead of using static images, CSS can rovide a more fle1ible solution. One such e1amle is
+designing a default rofile icture using the first letter of the user's name. In this coding challenge, utilize
+tailwind CSS roerties to achieve the desired outut described below.
+
+0 To finalize the design of our blog webage, it is crucial to incororate a subscrition section that can be
+utilized for marketing uroses. In this coding challenge, try to add a subscrition section following the
+secifications illustrated in the rovided image.
