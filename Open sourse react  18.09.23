@@ -1,0 +1,89 @@
+When creating a dynamically created Component with nested createElement() calls, re-rendering causes the whole children tree to unmount and re-mount again.
+
+React version: 18.3.0-canary-ade82b8dd-20230816 (most recent canary, as of the time of writing)
+
+Steps To Reproduce
+Create a dynamically created component, by nesting createElement:
+const DynamicComponent = createElement(() => createElement(Demo));
+Use <DynamicComponent /> as children
+return createElement("button", null, DynamicComponent);
+Re-render the component with said children.
+Link Make sure to open your console: https://www.jaggli.com/react-mount-unmount-anomaly.html
+Example Source: https://github.com/jaggli/jaggli.github.io/blob/master/react-mount-unmount-anomaly.html
+
+The relevant parts
+
+const { createRoot } = ReactDOM;
+const { createElement, useEffect, useState } = React;
+
+const App = () => {
+  const [renderAmount, setRenderAmount] = useState(1);
+
+  // 🪲 this is where the bug happens 🪲
+  // every re-render returns a new function inside the inner createElement
+  const DynamicComponent = createElement(() => createElement(Demo));
+
+  return createElement(
+    "button",
+    // button onChange increases the state and trigger a re-render of the App
+    { onClick: () => setRenderAmount(renderAmount + 1) },
+    DynamicComponent
+  );
+};
+
+// Component for logging into console on mount and unmount
+const Demo = () => {
+  useEffect(() => {
+    console.log(new Date().toLocaleTimeString(), "Did mount");
+    return () =>
+      console.log(
+        new Date().toLocaleTimeString(),
+        "Did unmount\n---"
+      );
+  }, []);
+  return "Click to change state (check the console)";
+};
+The current behavior
+When re-rendering <App /> (above), the children of <DynamicComponent /> get unmounted and re-mounted.
+
+The expected behavior
+When re-rendering <App />, children should stay mounted.
+
+by defining functions or components outside the rendering process and reusing them within your React component, we can optimize performance and maintain a more efficient and readable codebase.
+This technique is especially useful when dealing with functions that don't rely on component-specific state or props and can be shared across multiple parts of your application.
+
+const { createRoot } = ReactDOM;
+const { createElement, useEffect } = React;
+
+// Define the DynamicComponent as a separate component
+const DynamicComponent = () => {
+  useEffect(() => {
+    console.log(new Date().toLocaleTimeString(), "Did mount");
+    return () =>
+      console.log(
+        new Date().toLocaleTimeString(),
+        "Did unmount\n---"
+      );
+  }, []);
+
+  return createElement("div", null, "Click to change state (check the console)");
+};
+
+const App = () => {
+  return createElement(
+    "button",
+    { onClick: () => {} }, // No-op click handler for the example
+    createElement(DynamicComponent)
+  );
+};
+
+// Render the App component
+const root = createRoot(document.getElementById("root"));
+root.render(createElement(App));
+
+With this modification, the DynamicComponent is created only once and remains the same across re-renders of App. 
+As a result, the children of DynamicComponent will not unmount and remount when you re-render App.
+
+
+
+
