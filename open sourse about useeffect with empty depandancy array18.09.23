@@ -1,0 +1,108 @@
+A clean up useEffect given an empty dependency array, using a props method causes an error React Hook useEffect has a missing dependency: 'props'.
+This might be a familiar issue to some, and perhaps I need a different approach and there is some reason to change.
+But I raise the issue because it is from what I see a pain point for users of this functionality. Someone described it as not "ergonomic". And the same issue will continue to arise in the project this originates from.
+IMO in 2023 the React linter causes a conflict against what is commonly taught and what for my practical purposes has both worked and caused no issues. The clean up useEffect has a different behavior when given no dependency array, an empty [] array, or a filled one. There may be methods in at least some cases to de-structure and what not, satisfy the linter, but it is a pain point and I have struggled to find another working solution avoiding error.
+And keep in mind the code works in my use case, and similar useEffect syntax is noted by Dan Abramov - "to be clear, this code does work."
+
+It feels like useEffect has developed over time and linter in this case has not. Or I'm wrong?
+
+React version:
+"react": "^17.0.2",
+
+type AscensionModalProps = {
+  open: boolean;
+  onClose: () => void;
+  member: GangMember;
+  onAscend: () => void;
+};
+export function AscensionModal(props: AscensionModalProps): React.ReactElement {
+  const gang = useGang();
+  useRerender(1000);
+
+  //Cleanup if modal is closed for other reasons, ie. ns.gang.ascendMember()
+  useEffect(() => {
+    return () => {
+      props.onClose();
+    };
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  // dependency array must be given and empty or modal will not open
+  // React error wants 'props' in dependency or don't use 'props'.
+  // See: https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
+
+The current behavior
+React cause me trouble
+
+The expected behavior
+React cause react
+
+In React, the useEffect hook is used for side effects in functional components. 
+It takes two arguments: a function that contains the code for the side effect, and a dependency array that specifies when the side effect should run. 
+The dependency array is an optional argument, and it determines what values the effect depends on. 
+If the dependency array is empty ([]), it means the effect has no dependencies and should only run once after the component mounts.
+
+useEffect(() => {
+  return () => {
+    props.onClose();
+  };
+}, []);
+
+In this code, you're using props.onClose() within the useEffect, but since the dependency array is empty, it tells React that this effect doesn't depend on any specific prop or state. Therefore, React's linter warns you that you should include props as a dependency in the array to ensure that the effect always has access to the latest props value.
+suggestion:
+However, there's a common pattern in React where you want an effect to run only once when the component mounts, and you want to reference props within that effect.
+In such cases, you can safely disable the lint warning using the // eslint-disable-line react-hooks/exhaustive-deps comment, as you've done in your code.
+
+
+suggestion:
+If you have a custom hook called useMySuperHookWithoutDepsEffect and you want to use it in a useEffect without specifying any dependencies, you can certainly do that. 
+
+import React, { useEffect } from 'react';
+import { useMySuperHookWithoutDepsEffect } from './yourCustomHookFile';
+
+function MyComponent() {
+  // Assuming your custom hook returns some value or performs some side effect
+  const myValue = useMySuperHookWithoutDepsEffect();
+
+  useEffect(() => {
+    // You can use myValue here without specifying any dependencies
+    // Your custom hook may handle its own dependencies internally
+    // ...
+  }, []);
+
+  return (
+    <div>
+      {/* Render your component using myValue */}
+      <p>{myValue}</p>
+    </div>
+  );
+}
+
+export default MyComponent;
+
+a)You import your custom hook useMySuperHookWithoutDepsEffect from its source file.
+b)You call your custom hook within the component function to retrieve the value it provides or to trigger any side effects it might have.
+c)Inside the useEffect, you can use the value obtained from your custom hook (myValue) without specifying any dependencies in the dependency array ([]). 
+Your custom hook may handle its own dependencies internally, and React won't complain about missing dependencies in this case.
+
+
+example of non empty array:
+
+useEffect(() => {
+  // Effect code here
+}, [counter]);
+You're telling React that this effect depends on the counter variable, and it should be re-run whenever counter changes.
+If you update the value of counter within the useEffect, it won't cause an infinite loop or any issues.
+React is designed to handle this situation gracefully.
+
+useEffect(() => {
+  // Effect code here
+  setCounter(10); // Updating the counter within the effect is fine
+}, [counter]);
+In this case, when you update counter within the effect, it will trigger the effect to re-run, but it won't lead to an infinite loop.
+React manages the order of operations to ensure things work correctly.
+
+useEffect(() => {
+  // Effect code here
+}, []);
+Then the effect will run only once when the component mounts and won't be re-run, even if you update the counter value within it.
+This can lead to potential bugs when your code relies on the latest value of counter.
+
