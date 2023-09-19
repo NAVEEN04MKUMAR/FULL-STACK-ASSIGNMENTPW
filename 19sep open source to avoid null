@@ -1,0 +1,65 @@
+
+test("renders PersonView", () => {
+  const component = renderForSnapshot(<PersonView />, mockedPerson);
+  expect(component).toMatchSnapshot();
+});
+
+const renderForSnapshot = (
+  ui: React.ReactElement,
+  mockLoaderData?: LoaderDataType,
+): ReactTestRenderer => {
+
+  const mainRoute: RouteObject = {
+    path: "/",
+    element: ui,
+    loader:  () => {
+          return { personData: mockLoaderData };
+    }
+  };
+
+  const router = createMemoryRouter([mainRoute], {
+    initialEntries: ["/"],
+    initialIndex: 0,
+  });
+
+  return renderer.create(<RouterProvider router={router} />);
+};
+
+
+
+here the null snaptshot was produced we change them according to not null insert the
+
+Problem:
+Your PersonView component relies on data fetched asynchronously in the loader function within the router configuration.
+When you render PersonView for snapshot testing, it doesn't wait for the asynchronous data to be fetched before taking the snapshot.
+As a result, the component renders before it has the data it needs, leading to a null snapshot.
+
+Solution:
+To ensure that your component has the required data when rendering for snapshot testing, you need to make sure the asynchronous loading is completed.
+One way to achieve this is to use async/await within your test setup to wait for the data to be loaded before rendering the component for testing.
+
+
+modified code:
+const renderForSnapshot = async (
+  ui: React.ReactElement,
+  mockLoaderData?: LoaderDataType,
+): Promise<ReactTestRenderer> => {
+  const mainRoute: RouteObject = {
+    path: "/",
+    element: ui,
+    loader: async () => {
+      return { personData: mockLoaderData };
+    }
+  };
+
+  const router = createMemoryRouter([mainRoute], {
+    initialEntries: ["/"],
+    initialIndex: 0,
+  });
+
+  // Wait for the data to be loaded before rendering
+  await act(async () => {
+    renderer.create(<RouterProvider router={router} />);
+  });
+};
+
