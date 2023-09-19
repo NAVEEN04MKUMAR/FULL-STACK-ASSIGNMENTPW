@@ -1,0 +1,48 @@
+import React from "react";
+
+const KEY_OF_A = Symbol.for("a");
+const KEY_OF_B = "b";
+
+export default function App() {
+  return React.createElement(Foo, {
+    [KEY_OF_A]: "A",
+    [KEY_OF_B]: "B"
+  });
+}
+
+function Foo(props) {
+  return React.createElement(
+    "text",
+    null,
+    props[KEY_OF_A] + "__" + props[KEY_OF_B]
+  );
+}
+
+
+// -> undefined__B
+
+problem:if we are use this one as the directly then it is chances are there not private how to make it private 
+suggestion:
+In react whenever we are passs throuh props we should pass through as a plain sympol if we want maintain privicy,so
+
+import React from "react";
+
+const KEY_OF_A = "a";
+const KEY_OF_B = "b";
+
+export default function App() {
+  const props = {
+    [KEY_OF_A]: "A",
+    [KEY_OF_B]: "B"
+  };
+
+  return <Foo {...props} />;
+}
+
+function Foo(props) {
+  return <div>{props[KEY_OF_A] + "__" + props[KEY_OF_B]}</div>;
+}
+
+Here we pass through the plain strings "a" and "b".
+
+
