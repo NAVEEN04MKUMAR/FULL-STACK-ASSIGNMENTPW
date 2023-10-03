@@ -1,0 +1,19 @@
+Question 1 : User Management Backend with Express and MongoDB
+
+Objective:
+Design and develop a user management backend system using Express and MongoDB, allowing users to
+create, login account
+
+Requirement\[
+O@ Implement a RESTful API using ExpressAjs for handling userrelated operations@
+@ Utilise MongoDB as the database for storing user information@
+/@ Include functionality for user registration, User Login@
+@ Ensure proper Palidation and error handling throughout the application@
+@ DePelop clear and 0ellstructured code 0ith appropriate comments@
+_@ ProPide API documentation, including endpoints, request/response formats, and error handling.
+
+Review and submit:
+ RePie0 your code, ensuring it follows best practices and is iellstructured.
+ Doublecheck the functionality, error handling, and documentation.
+ Upload Your Code on GitHub with the API documentation (readme).
+Note: You can make use of additional npm packages
