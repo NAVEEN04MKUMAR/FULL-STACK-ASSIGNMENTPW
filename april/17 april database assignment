@@ -1,14 +1,78 @@
-5> Wha? is a Da?a6ase? Exp:ain wi?h an examp:e on whF shou:d we need a da?a6ase>
+5> What is a Database? Explain with an example on why should we need a database
+  is a software system that provides an organized and efficient way to store, manage, retrieve, and manipulate data. 
+
 
 E> Wri?e a shor? no?e on Fi:e 6ase s?orage sFs?em. Exp:ain ?he major cha::enges o0 a Fi:e-6ased s?orage sFs?em>
 
-$> Wha? is DB%S? Wha? was ?he need 0or DB%S/
+ What is DBMS? What was the need for DBMS?
+DBMS is a software system that provides an organized and efficient way to store, manage, retrieve, and manipulate data. 
+It serves as an intermediary between the application programs and the data stored in databases. 
 
-9> Exp:ain . cha::enges o0 0i:e-6ased s?orage sFs?em which was ?ack:ed 6F DB%S>
+*integrate with reporting,we can easily analyse and generate the report from data
+*it was helpful to backup process
+*it can avoid the dublicate so we can save the space
+*it can have the capacity to have the secuirity
 
--> is? ou? ?he di00eren? ?Fpes o0 c:assi0ica?ion in DB%S and exp:ain ?hem in dep?h>
+ Explain 5 challenges of file-based storage system which was tackled by DBMS?
 
-> Wha? is ?he signi0icance o0 Da?a %ode::ing and exp:ain ?he ?Fpes o0 da?a mode:ing>
+1.Data redundancy:
+File-Based Storage:same data we filled multiple files
+DBMS Solution: redundant data stored only once
 
-> Exp:ain 3 schema archi?ec?ure a:ong wi?h i?s advan?ages.
+2.Data incosistancy
+File-Based Storage:here chances are there for file updated one file but not another one
+DBMS Solution:here unique keys and referancial integrity present
+
+3.Data access:
+File-Based Storage:here custom code are required,it was time consuming
+DBMS Solution:here SQL is present so it can retrive the data efficiently
+
+4.Security and Access control:
+File-Based Storage:it was challanging to restrict the specific part of the code
+DBMS Solution:here user can assign the roles and permision
+
+5.Concurrency and Transaction Management:
+File-Based Storage:concurrency update lead to the data corruption
+DBMS Solution:here multi user environment possible
+
+what is the  different types of classification in DBMS and explain them in depth?
+
+data model classification:
+
+data in a DBMS can be classified based on the data model used to structure it.
+Relational Data Model: Data is organized into tables (relations) with rows (tuples) and columns (attributes). This model is the basis for Relational Database Management Systems (RDBMS), such as MySQL and PostgreSQL.
+Document Data Model: Data is stored as documents, often in formats like JSON or XML.MongoDB is an example of a document-based DBMS.
+Hierarchical Data Model: Data is organized in a tree-like structure, with parent-child relationships. 
+Graph Data Model: Data is represented as nodes and edges, making it suitable for modeling complex relationships. e.x Neo4j 
+Key-Value Data Model: Data is stored as key-value pairs, making it a simple and flexible way to store and retrieve data.e.x Redis 
+Object-Oriented Data Model: Data is represented as objects with attributes and methods, which is useful for applications with complex data structures.
+
+Data Structure Classification:
+Data can be classified based on its structure, which refers to how the data is organized and stored. Common data structure classifications include:
+Structured Data: Data with a well-defined schema and organized into tables or predefined structures.
+Semi-Structured Data: Data that doesn't adhere to a strict schema but has some structure, such as JSON, XML, or NoSQL documents.
+Unstructured Data: Data that lacks a predefined structure or schema, such as text, images, audio, and video files.
+Binary Data: Data that is stored in a binary format, often as a sequence of bytes or bits.
+
+Access Method Classification:
+Data in a DBMS can be classified based on the method of access, which includes:
+Indexed Data: Data is organized and accessed using indexes for efficient retrieval.
+Sequential Data: Data is accessed in a linear or sequential order, typically used for batch processing.
+Random Access Data: Data can be accessed directly, without the need to traverse 
+
+ What is the significance of Data modelling and explain the types of data modeling?
+
+ data to facilitate efficient storage, retrieval, and processing of information
+
+Communication:it convey the data requirement to the developers,database designers,stakeholder
+ Business Understanding:well developed data modelling gives the understanding business
+Secuirity:it give the protection to th  requirement one
+ Data Integrity:it provides the accuracy and consistancy
+
+Conceptual Data Modeling:focus one the essintial thing ,this on was early stage purpose
+Logical Data Modeling:it was helpful to the undestanding of the data requirements without specifing the physical one
+Physical Data Modeling:transfer the logical one to specific database system
+Hierarchical Data Modeling:Represents data in a tree-like structure with parent-child relationships.
+
+> Explain 3 schema architecture among with its advantages.
 
