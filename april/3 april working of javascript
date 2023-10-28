@@ -1,19 +1,19 @@
- Write a function called "addNumber that take two numbers a) arguments and returns their sum. 'all the
+1. Write a function called "addNumber that take two numbers a) arguments and returns their sum. 'all the
 function before it is declared to demonstrate hoisting
 
-Write a function called "multiplyNumbers that take two number a)argument) and returns their product.
+2.Write a function called "multiplyNumbers that take two number a)argument) and returns their product.
 use function expressions to define the function and call the function before it is declared to demonstrate
 hoisting
 
-@ Write a function that takes two numAers as arguments and returns their sum. Declare a variaAle inside the
+3.@ Write a function that takes two numAers as arguments and returns their sum. Declare a variaAle inside the
 function using the var keyword and log its value to the console before it i) assigned a value to demonstrate
 variaAle hoisting
 
- Declare three variaAle, one in let, one using var, and one usin3 const, all inside a block scope. assign
+ 4.Declare three variaAle, one in let, one using var, and one usin3 const, all inside a block scope. assign
 them value  and log their values to the console before and after they are declared to demonstrate variable
 hoisting
 
- Declare a variable in let inside a block scope and attempt to log it value to the console before it is
+ 5.Declare a variable in let inside a block scope and attempt to log it value to the console before it is
 assigned a value to demonstrate the temporal dead zone.
 
 
