@@ -15,3 +15,87 @@ hoisting
 
  Declare a variable in let inside a block scope and attempt to log it value to the console before it is
 assigned a value to demonstrate the temporal dead zone.
+
+
+
+//1.
+// //it is adding the two variable return their sum also before hoisting
+// const result=addnum(3,6);
+
+// function addnum(a,b){
+// return a+b;    
+// }
+// console.log(result);
+
+
+//2.
+// //product their sum return their value also value before hoisting
+// const result2=addnum(3,6);
+
+// function addnum(c,d){
+// return c*d;    
+// }
+// console.log(result2);
+
+
+// //3.
+// function demonstratehoisting(a,b){
+//     var result;
+//     console.log("value before assignment:"+result);
+//     result=a+b;
+//     console.log("value before assignment:"+result);
+//     return result;
+// }
+// const sum=demonstratehoisting(5,3);
+// console.log("returned home" + sum);
+// //what is it mean if we assign the vlue at the top by the var keyword then if we get the console value before declaration it hows undefined after declaration it shows actual value
+
+//4.
+// {    let letvariablebefore;
+//     console.log("letvariablebefore(beforedeclaraion)",letvariablebefore);// Output: undefined
+//     letvariablebefore="i am let variables";
+    
+//     console.log("varvariablebefore(beforedeclaraion)",varvariablebefore);//  Output: undefined
+//     var varvariablebefore="i am var variables";
+
+//     // console.log("constvariablebefore(beforedeclaraion)",constvariablebefore);// Output: ReferenceError
+//      const constvariablebefore="i am const variables";
+
+//     console.log("varvariablebefore(afterdeclaraion)",varvariablebefore);//i am var variables
+//     console.log("varvariablebefore(afterdeclaraion)",letvariablebefore);//i am let variables
+//     console.log("varvariablebefore(afterdeclaraion)",constvariablebefore);//i am const variables
+
+// }
+
+
+//     console.log("varvariablebefore(outside block declaraion)",varvariablebefore);//i am var variables
+// //    console.log("varvariablebefore(outside block declaraion)", letvariablebefore);// Output: ReferenceError
+//     console.log("varvariablebefore(outside block declaraion)",constvariablebefore); //Output: undefined
+
+    
+// //5.temporal dead zone
+
+// {
+
+//    console.log("varvariablebefore(outside block declaraion)", letvariablebefore);// Output: ReferenceError
+
+//    let letvariablebefore;
+//         letvariablebefore="i am let variables";    
+//         console.log("varvariablebefore(afterdeclaraion)",letvariablebefore);//  Output:i am let variables 
+
+
+// }
+// console.log("varvariablebefore(outside of scope)",letvariablebefore);//  Output:reference error
+
+// //temporal dead zone represent the let or const then if we assign the before the declaration it shows the  reference error 
+
+
+
+
+
+
+
+
+
+
+        
