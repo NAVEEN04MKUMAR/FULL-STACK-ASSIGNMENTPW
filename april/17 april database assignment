@@ -1,10 +1,22 @@
-5> What is a Database? Explain with an example on why should we need a database
-  is a software system that provides an organized and efficient way to store, manage, retrieve, and manipulate data. 
+1) What is a Database? Explain with an example on why should we need a database
+  A database is a structured collection of data that is organized and stored in a way that allows for efficient retrieval, management, and manipulation of that data. 
+Databases are used to store, manage, and retrieve data in a systematic and organized manner.
 
+Data Storage:They allow you to store large amounts of data in a structured format.
+Data Retrieval: Databases enable you to retrieve specific pieces of data quickly and efficiently using queries. 
+This is particularly useful for finding relevant information in large datasets.
+Data Integrity: Databases can enforce data integrity by defining constraints and rules that ensure the accuracy and consistency of the stored data. 
 
-E> Wri?e a shor? no?e on Fi:e 6ase s?orage sFs?em. Exp:ain ?he major cha::enges o0 a Fi:e-6ased s?orage sFs?em>
+2)Write a short note on File base storage system. Explain the major challenges of a File-based storage system
 
- What is DBMS? What was the need for DBMS?
+  it is represent the organizing and managinfg data where the information is stored in files and folder on the local storage media such as the harddrive.
+File-Based Storage:same data we filled multiple files
+File-Based Storage:here chances are there for file updated one file but not another one
+File-Based Storage:it was challanging to restrict the specific part of the code
+File-Based Storage:concurrency update lead to the data corruption
+File-Based Storage:same data we filled multiple files
+
+ 3)What is DBMS? What was the need for DBMS?
 DBMS is a software system that provides an organized and efficient way to store, manage, retrieve, and manipulate data. 
 It serves as an intermediary between the application programs and the data stored in databases. 
 
@@ -13,7 +25,7 @@ It serves as an intermediary between the application programs and the data store
 *it can avoid the dublicate so we can save the space
 *it can have the capacity to have the secuirity
 
- Explain 5 challenges of file-based storage system which was tackled by DBMS?
+4) Explain 5 challenges of file-based storage system which was tackled by DBMS?
 
 1.Data redundancy:
 File-Based Storage:same data we filled multiple files
@@ -22,6 +34,7 @@ DBMS Solution: redundant data stored only once
 2.Data incosistancy
 File-Based Storage:here chances are there for file updated one file but not another one
 DBMS Solution:here unique keys and referancial integrity present
+File-Based Storage:here custom code are required,it was time consuming
 
 3.Data access:
 File-Based Storage:here custom code are required,it was time consuming
@@ -35,6 +48,7 @@ DBMS Solution:here user can assign the roles and permision
 File-Based Storage:concurrency update lead to the data corruption
 DBMS Solution:here multi user environment possible
 
+5)
 what is the  different types of classification in DBMS and explain them in depth?
 
 data model classification:
@@ -60,8 +74,7 @@ Indexed Data: Data is organized and accessed using indexes for efficient retriev
 Sequential Data: Data is accessed in a linear or sequential order, typically used for batch processing.
 Random Access Data: Data can be accessed directly, without the need to traverse 
 
- What is the significance of Data modelling and explain the types of data modeling?
-
+6) What is the significance of Data modelling and explain the types of data modeling?
  data to facilitate efficient storage, retrieval, and processing of information
 
 Communication:it convey the data requirement to the developers,database designers,stakeholder
@@ -74,5 +87,14 @@ Logical Data Modeling:it was helpful to the undestanding of the data requirement
 Physical Data Modeling:transfer the logical one to specific database system
 Hierarchical Data Modeling:Represents data in a tree-like structure with parent-child relationships.
 
-> Explain 3 schema architecture among with its advantages.
+7)Explain 3 schema architecture among with its advantages.
+
+*single schema architecture:all data stored in single structure.
+                           it is for small scale application.
+*two-tier schema architecture:here user schema and system schema available, 
+                              user schema contains the data that application users interact with directly, while the system schema contains metadata and system-related information.
+*three-tier schema architecture: here user schema,logical schema and system schema available
+
+Simplicity and Ease of Use: Single schema and two-tier schema architectures are relatively simple and easy to understand and manage, making them suitable for smaller applications with straightforward data requirements.
+Security and Separation of Concerns: Two-tier and three-tier schema architectures allow for the separation of user data from system data, which can enhance security and data management.
 
