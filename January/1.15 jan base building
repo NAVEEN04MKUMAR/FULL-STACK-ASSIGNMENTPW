@@ -1,10 +1,58 @@
 
 what is  Internet Explain in your own words
 
+The internet is a global system of interconnected computer networks that use the standard Internet protocol suite (TCP/IP) to link several billion devices worldwide.
+It is a network of networks that consists of millions of private, public, academic, business, and government networks, of local to global scope, linked by a broad array of electronic, wireless and optical networking technologies.
+uses of internet:
+Communication: The internet makes it easy to communicate with people all over the world. You can send emails, make video calls, and chat with people in real time.
+Information: The internet is a vast source of information. You can find information on any topic imaginable, from the latest news to scientific research.
+Education: The internet can be used to learn new things and take online courses. There are also many educational resources available online, such as tutorials, articles, and videos.
+
 what is web browser? Explain in your own words
+A web browser is a software application that allows users to access and navigate the World Wide Web.
+It is a crucial tool for interacting with websites, viewing web pages, and accessing online content.
+Web browsers are designed to interpret and display web content, which includes text, images, videos, and other multimedia elements.
+
+Rendering Engine: Web browsers use a rendering engine to process and display web content.
+Different browsers may use different rendering engines, such as Blink (used in Google Chrome), Gecko (used in Mozilla Firefox), and WebKit (used in Apple's Safari).
+Security: Browsers include security features to protect users from online threats.
+This includes mechanisms to prevent malicious software downloads, phishing protection, and secure connections using protocols like HTTPS.
+Bookmarks and Favorites: Browsers provide the ability to save and organize favorite websites, making it easier to revisit frequently accessed web pages.
+Private Browsing: Private or incognito mode is a feature that allows users to browse the web without the browser storing a history of visited websites or cookies.
+This is useful for maintaining privacy and preventing tracking.
 
 what is  browser engine? Explain in your own words
+A web browser engine, often referred to as a rendering engine, is the core component of a web browser responsible for interpreting and displaying web content.
+It plays a fundamental role in how web pages are rendered and displayed on your screen.
+example:
+Blink: Blink is an open-source rendering engine developed by Google.
+It is used in the Google Chrome browser as well as other Chromium-based browsers like Microsoft Edge, Opera, and Brave.
+Gecko: Gecko is the rendering engine developed by Mozilla and is used in the Mozilla Firefox browser.
+It's known for its flexibility and adherence to web standards.
 
 what is  static sie? Explain in your own words
+Content: Static websites contain fixed, unchanging content.
+The content on these sites remains the same for every user and does not respond to user input or interactions.
+Coding: Static websites are typically built using HTML and CSS. They consist of individual HTML files that are pre-created and stored on a web server.
+These files are delivered to users as-is when they request a specific web page.
+Interactivity: Static websites lack interactivity.
+They do not process user input or allow users to log in, submit forms, or personalize content.
+Advantages: Static websites are simple, easy to develop and host, load quickly, and are secure as there are no databases or server-side code that can be compromised.
+They are suitable for content that doesn't change frequently.
+Examples: Brochure websites, personal blogs, portfolios, and small business websites are often static sites.
+They are also commonly used for one-page websites and landing pages.
 
 what is  dynamic sie? Explin in your own words.
+Content: Dynamic websites contain content that can change based on user input, database queries, or other external factors.
+The content is generated on-the-fly as users interact with the site.
+Coding: Dynamic websites are built using various technologies, including server-side scripting languages like PHP, Python, Ruby, or JavaScript, along with databases like MySQL, PostgreSQL, or MongoDB.
+These technologies allow the website to generate content dynamically.
+Interactivity: Dynamic websites offer extensive interactivity. Users can log in, submit forms, make personalized choices, and interact with the site in real-time.
+Content can be updated automatically based on user behavior.
+Advantages: Dynamic websites are highly interactive and can handle complex tasks, such as e-commerce, user authentication, content management, and real-time updates.
+They are suitable for sites with frequently changing content and user-specific experiences.
+Examples: Social media platforms, e-commerce sites like Amazon, content management systems like WordPress, and online banking sites are examples of dynamic websites
+
+
+
+
