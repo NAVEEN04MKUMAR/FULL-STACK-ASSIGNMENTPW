@@ -1,1 +1,124 @@
+1.what are the tools generally web developers use for working place?
 
+Text Editors and Integrated Development Environments (IDEs):
+Visual Studio Code
+Sublime Text
+Atom
+JetBrains WebStorm
+Adobe Dreamweaver
+Notepad++
+Brackets
+Version Control Systems:
+
+Git
+GitHub
+GitLab
+Bitbucket
+SVN (Subversion)
+Web Browsers:
+
+Google Chrome
+Mozilla Firefox
+Safari
+Microsoft Edge
+Opera
+Brave
+Browser Developer Tools:
+
+Browser developer tools are built-in features in web browsers that allow developers to inspect and debug web pages. They are included with the browsers listed above.
+Package Managers:
+
+npm (Node Package Manager)
+Yarn
+Bower
+Composer (for PHP)
+Front-End Frameworks and Libraries:
+
+React
+Angular
+Vue.js
+jQuery
+Bootstrap
+Foundation
+Semantic UI
+Back-End Frameworks and Platforms:
+
+Node.js
+Ruby on Rails
+Django (Python)
+Express.js
+Laravel (PHP)
+ASP.NET (C#)
+Code Editors and Extensions:
+
+Extensions and plugins for code editors can enhance productivity by adding features and integrations. Examples include ESLint, Prettier, and Live Server.
+Graphics and Design Tools:
+
+Adobe Photoshop
+Adobe Illustrator
+Sketch
+Figma
+Canva
+
+Database Management Tools:
+phpMyAdmin (for MySQL)
+pgAdmin (for PostgreSQL)
+MongoDB Compass
+Microsoft SQL Server Management Studio
+
+API Development Tools:
+Postman
+Insomnia
+Swagger
+
+Content Management Systems (CMS):
+WordPress
+Joomla
+Drupal
+Contentful
+Wix
+
+Performance and Optimization Tools:
+Google PageSpeed Insights
+GTmetrix
+WebPageTest
+Lighthouse (built into Chrome DevTools)
+
+Task Runners and Build Tools:
+Grunt
+Gulp
+Webpack
+Babel
+
+Text Editors for Markdown and Documentation:
+Markdown editors are useful for writing documentation and README files. Examples include Typora and Dillinger.
+
+Collaboration and Communication Tools:
+Slack
+Microsoft Teams
+Zoom
+Trello
+Jira
+
+Testing and QA Tools:
+Selenium
+Cypress
+Jest
+PostCSS
+
+Code Repositories and Hosting Services:
+GitHub
+GitLab
+Bitbucket
+Netlify
+Vercel
+Heroku
+
+Text Comparison and Merge Tools:
+DiffMerge
+Beyond Compare
+WinMerge
+
+2.What are some of the features of PW Skills Online Lab? Explain how they are useful.
+Really it is saves our time by providing each department by the different location.
+Really it was helpful to the have the separate lab i can use them what ever project we do at the class also it was helpful to arrange the project by the personal project also.
