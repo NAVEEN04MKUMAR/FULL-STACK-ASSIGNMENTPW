@@ -1,1 +1,15 @@
+1.What is HTML?
+HTML, which stands for Hypertext Markup Language, is the standard markup language used to create and structure content on the World Wide Web. 
 
+<html>: The root element that contains all other HTML elements on the page.
+<head>: Contains meta-information about the document, such as the page title and links to external resources like stylesheets and scripts.
+<title>: Sets the title of the web page, which is displayed in the browser's title bar or tab.
+<body>: Contains the main content of the web page, including text, images, links, and other elements.
+<h1>, <h2>, <h3>, etc.: Used for defining headings, with <h1> being the highest level and <h6> the lowest.
+<p>: Represents paragraphs of text.
+<a>: Defines hyperlinks, allowing users to navigate to other web pages.
+<img>: Embeds images in the document.
+<ul> and <ol>: Used for creating unordered and ordered lists, respectively.
+<li>: Represents list items within a list.
+<div>: A generic container used for grouping and styling content.
+<span>: A generic inline container for styling and scripting purposes.
