@@ -13,3 +13,63 @@ HTML, which stands for Hypertext Markup Language, is the standard markup languag
 <li>: Represents list items within a list.
 <div>: A generic container used for grouping and styling content.
 <span>: A generic inline container for styling and scripting purposes.
+
+2.what is CSS?
+
+CSS, which stands for Cascading Style Sheets, is a style sheet language used for describing the presentation and layout of web pages written in HTML and XML.
+CSS separates the content and structure of a web page (defined by HTML) from its visual style and appearance. 
+
+Selectors: CSS uses selectors to target HTML elements to apply styles to. Selectors can target elements by their type (e.g., <p>), class (e.g., .header), ID (e.g., #main-content), and more.
+Properties: CSS rules consist of a selector and a set of properties and values.
+Properties describe what aspect of the element's style you want to change, and values specify how to change it. :
+h1 {
+    color: blue;
+    font-size: 24px;
+}
+here,the h1 elements will have blue text color and a font size of 24 pixels.
+Inheritance: CSS properties can be inherited from parent elements to child elements in the HTML document.
+This means that if you set a style on a parent element, its children can inherit that style unless they have their own conflicting styles.
+
+
+3.Why javascript come into the picture?
+
+JavaScript is an essential component in web development because it adds interactivity and dynamic behavior to web pages.
+
+Single Page Applications (SPAs): JavaScript is central to building SPAs, which load a single HTML page and dynamically update the content as the user interacts with the application.
+Frameworks like React, Angular, and Vue.js have gained popularity for building SPAs.
+Client-Side Validation: JavaScript can perform client-side form validation, checking data input on the user's device before it's sent to the server.
+This improves data quality and user feedback.
+Dynamic Content: JavaScript can manipulate the DOM (Document Object Model), which represents the structure of an HTML document. This means you can add, remove, or modify elements on a web page in real-time.
+For example, you can update the content of a webpage without requiring a full page reload, making the user experience more dynamic.
+Ajax (Asynchronous JavaScript and XML): JavaScript allows you to make asynchronous requests to the server, retrieve data, and update parts of a web page without refreshing the entire page.
+This technology is essential for creating responsive and efficient web applications.
+
+
+4.History of javascript and Ecmascript?
+
+The history of JavaScript and ECMAScript is closely intertwined, as ECMAScript is the standardized specification that defines the JavaScript programming language. Here is a brief history of both JavaScript and ECMAScript:
+
+JavaScript:
+
+Creation at Netscape: JavaScript was created by Brendan Eich in 1995 while he was working at Netscape Communications. The initial name was "Mocha," which was later changed to "LiveScript" and eventually to "JavaScript."It was introduced as a scripting language for the Netscape Navigator web browser.
+Microsoft JScript: Microsoft recognized the potential of JavaScript and developed its own version called JScript for use in Internet Explorer. This led to some early inconsistencies and browser-specific implementations of JavaScript.
+Netscape Submits to ECMA: In 1996, Netscape submitted JavaScript to the European Computer Manufacturers Association (ECMA) for standardization. This standardization process led to the creation of the ECMAScript specification.
+ECMAScript 1: In 1997, ECMA published the first edition of the ECMAScript standard (ECMAScript 1), which provided a common set of features for JavaScript and JScript.
+DOM and Browser Wars: JavaScript was primarily used for manipulating the Document Object Model (DOM) to create dynamic web pages. During the late 1990s, there were "browser wars" between Netscape and Microsoft, resulting in proprietary JavaScript extensions.
+ECMAScript 3: ECMAScript 3, published in 1999, brought significant improvements to the language and aimed to standardize features that had become widely adopted in browsers.
+
+ECMAScript:
+ECMAScript 4 (Abandoned): There was an attempt to develop ECMAScript 4 with substantial changes and additions,but it faced disagreements and was ultimately abandoned due to lack of consensus.
+ECMAScript 5: In 2009, ECMAScript 5 was released, providing important language enhancements, including strict mode and new built-in methods for arrays and objects.
+Harmony and ECMAScript 6: The development of ECMAScript 6 (also known as ECMAScript 2015) started under the codename "Harmony." It introduced major language features such as arrow functions, classes, promises, and modules. ECMAScript 6 aimed to make JavaScript more powerful and easier to work with.
+Annual Releases: After ECMAScript 6, the ECMAScript standard adopted a yearly release cycle, which has allowed for regular updates and new features to be added to the language.
+Current Versions: Subsequent ECMAScript versions have continued to enhance the language. Notable releases include ECMAScript 2016 (ES7), ECMAScript 2017 (ES8), and so on. The ECMAScript specification continues to evolve and improve the JavaScript language.
+Browsers and Compatibility: As new ECMAScript features are added, web browsers implement them to varying degrees. Web developers use transpilers like Babel to write code using the latest ECMAScript features and convert it to code that runs in older browsers
+
+
+
+
+
+
+
+
