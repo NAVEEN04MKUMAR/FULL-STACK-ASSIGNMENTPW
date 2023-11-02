@@ -1,3 +1,12 @@
 
 What is emmet
- What are the advantages of using emmet
+
+Emmet is a powerful and widely used web development tool that provides shortcuts and abbreviations for writing HTML and CSS code more efficiently.
+It's a productivity tool that helps web developers speed up their workflow by allowing them to write code faster and with less typing.
+
+What are the advantages of using emmet
+
+Reduction in Typing Errors:Fewer keystrokes mean fewer opportunities for typographical errors. Emmet can help reduce common mistakes and typos in your code.
+HTML and CSS Generation:Emmet can generate HTML and CSS code automatically from shorthand notations, saving you the time and effort of writing repetitive code.
+Integrated with Popular Code Editors:Emmet is integrated with many code editors and IDEs, including Visual Studio Code, Sublime Text, Atom, and more, making it easily accessible to developers.
+Customization:Emmet can be customized to suit individual coding preferences and project requirements. Developers can define their own abbreviations and templates.
