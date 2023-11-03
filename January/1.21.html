@@ -1,1 +1,113 @@
+1.Block-level Elements:
+Block-level elements create a new "block" or box in the web page layout. They typically start on a new line and take up the full width available to them by default.
+Examples:<div>, <p>, <h1>, <ul>, <ol>, <li>, <table>, <form>
+Inline Elements:
+Inline elements, on the other hand, do not create a new block or box. They flow within the content and only take up as much width as necessary to display their content.
+Examples of inline elements include: <span>, <a>, <strong>, <em>, <img>, <br>, <input>, <small>, and more.
+
+2.How to work with images in HTML and expainin detail <img/> tag important attributes?
+Working with images in HTML involves using the <img> (image) tag to display images on a web page.
+  The <img> tag has several important attributes that allow you to control how the image is displayed and provide important information about the image.
+  Here are some of the key attributes of the <img> tag:
+
+src (Source):
+The src attribute specifies the URL (file path) of the image you want to display. It is a required attribute.
+Example: <img src="image.jpg" alt="An example image">
+
+alt (Alternate Text):
+The alt attribute provides alternative text for the image. It is important for accessibility and SEO. If the image cannot be displayed or is not visible, the alt text is displayed instead.
+Example: <img src="image.jpg" alt="An example image">
+
+width and height:
+The width and height attributes allow you to specify the dimensions (in pixels) of the image. These attributes can be used to control the display size of the image.
+Example: <img src="image.jpg" alt="An example image" width="300" height="200">
+
+title:
+The title attribute provides additional information about the image. When a user hovers their mouse over the image, the title text is displayed as a tooltip.
+Example: <img src="image.jpg" alt="An example image" title="Click to enlarge">
+
+loading:
+The loading attribute (HTML5) specifies how the browser should load the image. Possible values include "auto," "lazy," and "eager." "auto" is the default, "lazy" defers loading until the image is near the viewport, and "eager" loads the image immediately.
+Example: <img src="image.jpg" alt="An example image" loading="lazy">
+
+decoding:
+The decoding attribute (HTML5) controls how the browser should handle image decoding. It can be set to "sync" (default) or "async." "sync" means decoding happens synchronously with HTML parsing, while "async" defers it until after HTML parsing.
+Example: <img src="image.jpg" alt="An example image" decoding="async">
+
+sizes and srcset (for responsive images):
+The sizes attribute specifies the media condition (e.g., screen width) at which different image sources (defined by srcset) should be used. This is important for responsive web design.
+The srcset attribute lists multiple image sources and their respective sizes, allowing the browser to choose the most appropriate image to display based on the user's device and viewport size.
+Example:
+
+<img
+  src="small.jpg" srcset="medium.jpg 800w, large.jpg 1200w" sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" alt="Responsive image">
+
+crossorigin:
+The crossorigin attribute (HTML5) is used when loading images from a different domain to control CORS (Cross-Origin Resource Sharing) behavior. Possible values include "anonymous" and "use-credentials."
+Example: <img src="https://example.com/image.jpg" alt="Cross-origin image" crossorigin="anonymous">
+
+loading:
+The loading attribute (HTML5) controls how the browser should load the image. Possible values include "auto," "lazy," and "eager." "auto" is the default, "lazy" defers loading until the image is near the viewport, and "eager" loads the image immediately.
+Example: <img src="image.jpg" alt="An example image" loading="lazy">
+
+usemap:
+The usemap attribute associates an image with a client-side image map, allowing you to define clickable areas within the image that link to different URLs or perform actions.
+Example: <img src="image.jpg" alt="An example image" usemap="#imagemap">
+
+3.How to create HTML
+Start with the Document Structure:
+Begin your HTML document with the document type declaration, <!DOCTYPE html>.
+This declaration informs the browser that the document is written in HTML5, the latest version of HTML.
+<!DOCTYPE html>
+
+  Create the HTML Element:
+Wrap the entire content of your web page within the <html> element. The <html> element is the root element of an HTML document.
+
+<html>
+    <!-- Your content goes here -->
+</html>
+
+  Head Section:
+Inside the <html> element, you have two main sections: the <head> section and the <body> section.
+The <head> section contains metadata about the document, such as the title, character set, and links to external resources (CSS and JavaScript).
+<head>
+    <meta charset="UTF-8">
+    <title>Your Page Title</title>
+    <!-- Other metadata and links go here -->
+</head>
+
+Body Section:
+The <body> section contains the visible content of your web page, including text, images, links, and other elements.
+  <body>
+    <h1>Hello, World!</h1>
+    <p>This is a simple HTML page.</p>
+    <!-- Other content goes here -->
+</body>
+
+  Save Your File:
+
+Save your file with an .html extension (e.g., index.html) to a location on your computer. Make sure to select "All Files" as the file type when saving.
+View Your HTML Page:
+Open your web browser (e.g., Chrome, Firefox, Safari) and drag your HTML file into the browser or use "File" -> "Open File" to browse and select your HTML file. Your HTML page will be displayed in the browser.
+
+4.How to interlink webpage and navigate people to otherwebsites:  
+In HTML, you can create hyperlinks to interlink web pages within your own website or to navigate people to other external websites.
+Hyperlinks are created using the <a> (anchor) element. Here's how to create both types of links:
+Internal Links (Within Your Website):
+To create links to other pages within your own website, follow these steps:
+Create the anchor element (<a>) and set the href attribute to the relative path of the target page. The relative path should be based on the location of the current HTML file.
+<a href="page2.html">Go to Page 2</a>
+  
+we can link to different pages on your website by changing the href attribute to the relative path of each page you want to link to.
+External Links (Other Websites):
+Create the anchor element (<a>) and set the href attribute to the full URL of the external website. 
+<a href="https://www.example.com">Visit Example Website</a>
+
+The target attribute can be added to specify how the linked page should be opened. Common values for the target attribute include:
+_blank: Opens the linked page in a new tab or window.
+_self (default): Opens the linked page in the current tab or window.
+_parent: Opens the linked page in the parent frame, if applicable.
+_top: Opens the linked page in the full body of the current window, clearing any frames.
+Example:
+<a href="https://www.example.com" target="_blank">Visit Example Website</a>
 
