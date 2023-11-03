@@ -1,1 +1,214 @@
 
+1.Explain them Table and its properties
+Table Element (<table>):
+The <table> element is the container for the entire table. It is the top-level element used to define the table's structure.
+<table>
+    <!-- Table rows and cells go here -->
+</table>
+
+Table Row Element (<tr>):
+The <tr> element is used to define a table row. It contains one or more table cells ( <td> or <th> elements).
+<tr>
+    <td>Row 1, Cell 1</td>
+    <td>Row 1, Cell 2</td>
+</tr>
+
+Table Header Element (<th>):
+The <th> element is used to define table headers, which are typically displayed in bold and centered. They provide labels for columns or rows.
+Example:
+<tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+</tr>
+
+Table Data Element (<td>):
+The <td> element represents a table cell containing data. It's used to display content within the table's rows and columns.
+<tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+</tr>
+
+Table Caption Element (<caption>):
+The optional <caption> element is used to provide a title or description for the entire table. It is typically placed inside the <table> element.
+Example:
+<table>
+    <caption>Monthly Sales</caption>
+    <!-- Table rows and cells go here -->
+</table>
+Table Cell Padding (cellpadding) and Cell Spacing (cellspacing) Attributes:
+
+The cellpadding attribute controls the space between the cell content and the cell border.
+The cellspacing attribute controls the space between adjacent cells within the table.
+Example:
+<table cellpadding="10" cellspacing="5">
+    <!-- Table rows and cells go here -->
+</table>
+
+Table Border (border) Attribute:
+The border attribute specifies the thickness of the border around the table and its cells. A value of "1" adds a border, while "0" removes it.
+Example:
+<table border="1">
+    <!-- Table rows and cells go here -->
+</table>
+
+Table Rowspan and Colspan Attributes:
+The rowspan attribute allows a cell to span multiple rows.
+The colspan attribute allows a cell to span multiple columns.
+Example:
+<tr>
+    <td rowspan="2">Spanning Two Rows</td>
+    <td colspan="3">Spanning Three Columns</td>
+</tr>
+
+Table Width and Height Attributes:
+The width and height attributes can be applied to the table to control its dimensions. You can use values in pixels, percentages, or other units.
+Example:
+<table width="100%" height="200">
+    <!-- Table rows and cells go here -->
+</table>
+
+2.Explain all Media elements and how they work
+<img> Element (Image):
+The <img> element is used to display images on a web page.
+It has an essential attribute, src, which specifies the image file's source URL.
+Example:
+<img src="image.jpg" alt="An example image" width="300" height="200">
+
+<audio> Element (Audio):
+The <audio> element allows you to embed audio files for playback on a web page.
+You should include the src attribute to specify the audio file's source URL.
+You can add multiple source elements within the <audio> element to provide different formats for broader browser compatibility.
+Optional attributes include controls to display audio playback controls and autoplay to automatically start playback.
+Example:
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<video> Element (Video):
+The <video> element is used to embed and display video content on a web page.
+Like the <audio> element, you can include multiple source elements to offer different video formats for various browsers.
+The controls attribute adds video playback controls, and autoplay starts playback automatically.
+You can specify video dimensions using the width and height attributes.
+Example:
+<video controls width="400" height="300">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    Your browser does not support the video element.
+</video>
+
+<iframe> Element (Inline Frame):
+The <iframe> element is used to embed external web pages, including content from other websites or services like Google Maps or YouTube.
+The src attribute specifies the URL of the external content.
+You can set the width and height attributes to control the frame's dimensions.
+Example:
+<iframe src="https://www.youtube.com/embed/VIDEO_ID" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+
+<canvas> Element (HTML5 Canvas):
+The <canvas> element provides a blank drawing surface where you can use JavaScript to create interactive graphics and animations.
+You can set the width and height attributes to specify the canvas's dimensions.
+JavaScript is used to draw and manipulate graphics on the canvas.
+Example:
+<canvas id="myCanvas" width="400" height="200"></canvas>
+
+
+3.What is Get and Post in Form
+GET:
+"GET" is one of the HTTP methods used to request data from a web server.
+In the context of HTML forms, when you use the "GET" method in the <form> element, the data submitted through the form is appended to the URL as query parameters. This means the data is visible in the URL itself.
+"GET" is suitable for requests that do not modify server data and are idempotent, meaning multiple requests for the same data will have the same result.
+It is commonly used for search forms, navigation, and linking to other pages.
+Example form:
+<form action="search.php" method="GET">
+    <input type="text" name="query">
+    <input type="submit" value="Search">
+</form>
+When submitted, the URL may look like: search.php?query=user+input.
+POST:
+"POST" is another HTTP method used to send data to a web server.
+In the context of HTML forms, when you use the "POST" method, the data submitted through the form is included in the body of the HTTP request. It is not visible in the URL, making it more suitable for sensitive or large amounts of data.
+"POST" requests are not idempotent, as they may change server data. They are often used for submitting forms with user credentials or for updating data on the server.
+Example form:
+<form action="login.php" method="POST">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="submit" value="Log In">
+</form>
+
+
+
+4.List all the input types we have in forms.
+Text Input:
+<input type="text">: Creates a single-line text input field for general text input.
+
+Password Input:
+<input type="password">: Similar to a text input but hides the entered characters for password fields.
+
+Textarea:
+<textarea>: Creates a multi-line text input field for longer text or comments.
+
+Radio Buttons:
+<input type="radio">: Allows users to select one option from a group of choices. Use the name attribute to group them.
+
+Checkboxes:
+<input type="checkbox">: Allows users to select multiple options from a list. Each checkbox is independent.
+
+Select Dropdown:
+<select>: Creates a dropdown list of options. Use nested <option> elements to define the choices.
+
+File Input:
+<input type="file">: Allows users to upload files. Typically used for file uploads.
+
+Number Input:
+<input type="number">: Provides a numeric input field with up/down arrows for incrementing or decrementing values.
+
+Email Input:
+<input type="email">: Validates that the entered text is in a valid email format.
+
+URL Input:
+<input type="url">: Validates that the entered text is in a valid URL format.
+
+Telephone Input:
+<input type="tel">: Typically used for phone numbers and can trigger a numeric keyboard on mobile devices.
+
+Date Input:
+<input type="date">: Provides a date picker for selecting a date.
+
+Time Input:
+<input type="time">: Offers a time picker for selecting a time.
+
+Color Input:
+<input type="color">: Displays a color picker for selecting a color.
+
+Range Input:
+<input type="range">: Allows users to select a value within a specified range using a slider.
+
+Hidden Input:
+<input type="hidden">: Stores data on the form that is not visible to the user but gets submitted with the form.
+Submit Button:
+
+<input type="submit">: Adds a button to submit the form.
+Reset Button:
+
+<input type="reset">: Adds a button to reset the form to its initial state.
+Button:
+
+<input type="button"> or <button>: Provides a custom button for user interaction, often used with JavaScript for custom actions.
+Image Input:
+
+<input type="image">: Allows using an image as a submit button. The src attribute specifies the image.
+Color Picker:
+
+<input type="color">: Presents a color picker for choosing colors.
+Month Input:
+
+<input type="month">: Allows selecting a month and year.
+Week Input:
+
+<input type="week">: Enables selecting a specific week and year.
+Datetime Input:
+
+<input type="datetime-local">: Allows choosing both a date and time.
+
+
+
