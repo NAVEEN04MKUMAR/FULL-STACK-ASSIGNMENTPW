@@ -24,6 +24,8 @@ Semantic tags in HTML are elements that provide meaning to the structure of a we
 They help convey the intended purpose of different sections of the page to both browsers and assistive technologies (such as screen readers).
 Semantic tags make it easier to understand the content's hierarchy and purpose. 
 
+
+
 3.example of the sematic tags:
 <header>:
 The <header> element represents the introductory content or a container for a set of navigational links at the top of a web page or a section within a page. It typically includes elements like the site logo, site title, and navigation menus.
