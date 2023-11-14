@@ -218,13 +218,13 @@ function doublecartquantities(cart){
 // it on its website. They want a function that can convert Celsius to Fahrenheit accurately and efficiently. The
 // function should take input in Celsius and return output in Fahrenheit. This function will help thd weather station
 // to provide temperature readings that are easily understandable to a widdr audince.
-
-
-
-
-
-
-
+function celsiustofahrenheit(celsius){
+    const fahrenheit=(celsius*9/5)+32;
+    return fahrenheit;
+}
+const celsiustemp=25;
+const fahrenheittemp=celsiustofahrenheit(celsiustemp);
+console.log(`${celsiustemp} degrees celcius equal to the ${fahrenheittemp} degree fahrenheittemp` );
 
 // 12. Calculate rental cost
 // A car rdntal company nddds to calculatd thd cost of a rdntal basdd on thd numbdr of days rdntdd and thd typd
@@ -235,6 +235,34 @@ function doublecartquantities(cart){
 // V Midsizd = Rs. 1F,FFF /- per dayE
 // V Luxury = Rs. 2F,FFF /- per day.
 
+function calculaterentalcost(daysrented,cartype){
+const economycostperday=4000;
+const midsizecostperday=6000;
+const luxurycostperday=10000;
+let rentalcost=0;
+switch(cartype){
+case 'economy':
+    rentalcost=economycostperday;
+    break;
+case 'midsize':
+    rentalcost=midsizecostperday;
+    break;
+case 'luxury':
+    rentalcost=luxurycostperday;
+    break;    
+default:
+    console.log("invalid cartype");
+    return;
+}
+const totalcost= rentalcost*daysrented;
+return totalcost;
+}
+
+const daysrented=6;
+const cartype='economy';
+const totalcost=calculaterentalcost(daysrented,cartype);
+console.log(`total rental cost for ${daysrented} days of ${cartype} car: Rs.${totalcost}`);
+
 // 13. Bill splitter
 // A restaurant wants to calculate the total bill for a table based on the cost of each dish and the number of
 // people sharing it. They require a function that takes in the cost of each dish and the number of people sharing
@@ -242,13 +270,28 @@ function doublecartquantities(cart){
 
 
 
+
+
+
+
 // 14. Calculate the final order price
 // A retail store needs to calculate the total cost of items in a customer's cart. A customer cart is an array of
 // objects with unit price and quantity. Implement an arrow function to calculate the total cost of items, based on
 // the unit price and quantity of each item.
-
-
-
+const calculatetotalorder=(cart)=>{
+    const totalorderprice=cart.reduce((total,item)=>{
+        if(item.unitprice&&item.quantity){
+            return total+(item.unitprice*item.quantity);
+        }else{
+            console.log(`invalid item in the cart`);
+            return total;
+        }
+    },0);
+    return totalorderprice;
+};
+customercart=[{unitprice:10,quantity:4},{unitprice:10,quantity:3},{unitprice:10,quantity:2},{unitprice:10,quantity:1}];
+const totalorderprice=calculatetotalorder(customercart);
+console.log(`totalorderprice:${totalorderprice}`)
 
 // 15. Calculate the percentage of the discount
 // A retail store is offering a discount on its products and wants to calculate the percentage of the discount to
@@ -256,26 +299,32 @@ function doublecartquantities(cart){
 // implement an arrow function to calculate the percentage of the discount rounded off to two decimal places.
 // This function could be useful for the store's marketing team to create promotions and offers that attract
 // customers.
+const calculatediscountpercentage=(originalprice,discountedprice)=>{
+    const discountamount=originalprice-discountedprice;
+    const discountpercentage=(discountamount/originalprice)*100;
+    return discountpercentage;
+}
 
-
-
-
+const originalprice=100;
+const discountedprice=80;
+const discountpercentage=calculatediscountpercentage(originalprice,discountedprice);
+console.log(`the discountpercentage is the ${discountpercentage}%`);
 
 // 16. Generate a random number
 // Create a JavaScript program that generates a random number between 1 and 100 when the program starts.
 // Use a self-invoking arrow function to generate the random number. This program can be used as a component
 // in various games or applications that require a random number generator.
-
-
-
+const min=1;
+const max=100;
+const randomgenerator=(()=>{
+    return Math.floor(Math.random()*(max-min+1)+min);//.5678*100=56.78+1
+})();
+console.log(`generate random number:${randomgenerator}`);
 
 // 17. Build a banking application
 // A banking application needs to manage customer accounts and transactions. The user detail is stored in an
 // object with a keys name and balance. Write functions using object methods to update a customer's account
 // balance based on a deposit or withdrawal.
-
-
-
 
 // 18. Change Text on Button click.
 // Create a simple HTML page with a heading and a button. The initial text must be “The most affordable learning
@@ -294,14 +343,87 @@ function doublecartquantities(cart){
 // the input is invalid. The input type of email must be text and the input type of password must be password
 // without any minLength attribute specified.
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    .errormessage {color: red;}
+    .success-message {color: green;}
+  </style>
+</head>
+<body>
+  <form id="loginForm">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="button" onclick="validateLogin()">Submit</button>
+  </form>
+  <p id="errorMessage" class="error-message"></p>
+  <script src="script.js"></script>
+</body>
+</html>
 
-// 20. Dynamically Adding List Items to an Ordered List
-// Visit page and look for “What you'll learn” section.
+
+function validatelogin() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailRegex.test(email) && password.length >= 8) {
+    displayMessage("Valid email and password!", "success-message");
+  } else {
+    displayMessage("Invalid email or password!", "error-message");
+  }
+}
+function displayMessage(message, className) {
+  const errorMessageElement = document.getElementById('errorMessage');
+  errorMessageElement.textContent = message;
+  errorMessageElement.className = className;
+}
+
+// 20. Dynamically Adding List Items to an Ordered List Visit page and look for “What you'll learn” section.
 // The section consists of a list of information on what you will be learning in the course. You are required to write
 // a JavaScript program that stores a pre-existing array of list items. On each button click, the program should
 // add a new list item in sequential order. The program should verify if any remaining items are available in the list
-// item array and add the next item to the list accordingly. If no items are left, the function should display a
-// message indicating that all items have been added.
+// item array and add the next item to the list accordingly. If no items are left, the function should display a message indicating that all items have been added.
+
+//html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamically add list items</title>
+</head>
+<body>
+<button id="additembutton">add item</button>
+<ol id="itemlist"></ol>
+<script src="script.js"></script>
+</body>
+</html>
+
+//javascript code
+document.addEventListener('DOMContentLoaded',function(){
+const itemlistarray=["introduction","basic content","advanced topics","hands on projects"];
+const additembutton=document.getElementById('additem');
+const itemlist=document.getElementById('itemlist');
+let currentitemindex=0;
+additembutton.addEventListener('click',function(){
+    if(currentitemindex<itemlistarray.length){
+        const newitem=document.createElement('li');
+        newitem.textContent = itemlistarray[currentitemindex];
+        itemlist.appendchild(newitem);
+        currentitemindex++;
+    }else{
+        alert("All items have been added.");
+    }
+});
+    });
+
 
 // 21. TODO App
 // Create a simple to-do app to add TODO items to the list through an input field and a button.
