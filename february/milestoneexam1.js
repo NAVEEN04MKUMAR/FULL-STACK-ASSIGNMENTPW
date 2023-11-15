@@ -425,19 +425,69 @@ additembutton.addEventListener('click',function(){
     });
 
 
-// 21. TODO App
-// Create a simple to-do app to add TODO items to the list through an input field and a button.
+// 21. TODO App Create a simple to-do app to add TODO items to the list through an input field and a button.
+ 
 
-// 22. Progress Bar
-// Create a progress bar that fills up as the user scrolls down the page.
 
-// 23. Change the color on click
-// Create a button that utilizes an array of colors and the Math.random method to change the background color
-// of the page upon clicking.
+// 22. Progress Bar Create a progress bar that fills up as the user scrolls down the page.
+
+ 
+
+
+// 23. Change the color on click Create a button that utilizes an array of colors and the Math.random method to change the background color of the page upon clicking.
+
+
+
+
+
+
+
 
 // 24. Text Highlighting
-// Using the Document Object Model (DOM), highlight all words in a paragraph element that are greater than 8
-// characters. The highlighted words should be with a yellow background color.
+// Using the Document Object Model (DOM), highlight all words in a paragraph element that are greater than 8 characters.
+// The highlighted words should be with a yellow background color.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text highlight</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p id="paragraph">
+    This is a sample paragraph with words of varying lengths. Some words are shorter, and others are longer than 8 characters.
+  </p>
+<script>
+    document.addEventListener("DOMContentLoaded",function(){
+        var paragraph=document.getElementById("paragraph");
+       
+        highlightlongwords(paragraph);
+       
+        function highlightlongwords(element){
+    var textcontent=element.textcontent;
+    var words=textcontent.split(/\s+/);//convert into an array of words
+
+    for(var i=0;i<words.length;i++){
+        var word=words[i];
+        if(word.length>8){
+            var spen=document.createElement("span");
+            span.classList.add("highlight");
+            span.textcontent=word;
+            words[i]=span.outerHTML;
+        }
+    }
+    element.innerHTML=word.join(" ");
+}
+    });
+</script>
+</body>
+</html>
 
 // 25. Move the Image
 // The objective is to write a JavaScript program that enables an image to move according to the direction
@@ -445,3 +495,78 @@ additembutton.addEventListener('click',function(){
 // keys, and accordingly, update the position of the image on the screen. The program should be able to handle
 // the movement of the image in all directions, including up, down, left, and right, in a smooth and responsive
 // manner. Have a look at the event key codes before starting the project.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>move image with arrow keys</title>
+  <style>
+    #movingImage {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      transition: all 0.1s ease; 
+    }
+  </style>
+</head>
+<body>
+  <img id="movingImage" src="image.png" alt="Moving Image">
+<script>
+    document.addEventListener("DOMContentLoaded",function(){
+        var movingimage=document.getElementById("movingimage");
+        var step=10;
+
+        function moveimage(direction){
+            var currentposition=movingimage.getBoundingClientRect();
+            var newposition;
+
+switch(direction){
+        case "up":
+        newposition={top:currentposition.top-step,left:currentposition.left};
+        break;
+
+        case "down":
+        newposition={top:currentposition.top+step,left:currentposition.left};
+        break;
+        
+        case "left":
+        newposition={top:currentposition.top,left:currentposition.left-step};
+        break;
+
+        case "right":
+        newposition={top:currentposition.top,left:currentposition.left+step};
+        break; 
+        default:
+        return;
+}
+movingimag.style.top=newposition.top+"px";
+movingimag.style.left=newposition.top+"px";
+      } 
+      document.addEventListener("keydown",function(event){
+switch(event.key){
+        case "arrowup":
+        moveimage("up");
+        break;
+
+        case "arrowdown":
+        moveimage("down");
+        break;
+
+        case "arrowleft":
+        moveimage("left");
+        break;
+
+        case "arrowright":
+        moveimage("right");
+        break;
+        
+        default:
+        break;
+
+}});
+});
+</script>
+</body>
+</html>
