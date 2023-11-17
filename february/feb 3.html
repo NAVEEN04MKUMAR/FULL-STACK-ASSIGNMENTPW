@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        height:100vh;
+        margin:0;
+        padding:0;
+        background-image: url('https://t4.ftcdn.net/jpg/05/72/54/67/360_F_572546714_2mn39TUv2f5Lmg7JRT9yvSkuTJERGyg8.jpg');
+        background-size:cover;
+        background-position:center;
+        background-color: aquamarine;
+        font-family: Arial, Helvetica, sans-serif;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #logo{
+        position:absolute;
+        top:10px;
+        left: 10px;
+        width: 100px;
+        height: auto;
+    }
+    #header{
+        position: absolute;
+        top:17%;
+        left:50%;
+        display:flex;
+        justify-content: space-between;
+    }
+    #restaurantletter{
+        font-size: 4em;
+        color:orange;
+        text-shadow: 2px 2px 4px rgba(red, green, blue, alpha);
+        position:absolute;
+        top:52%;
+        left:28%;
+        transition:transition(-50%,-50%);
+    }
+    nav{
+        display: flex;
+        gap:20px;
+    }
+    nav a{
+        color:orange;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2em;
+    } 
+       #main-content {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+#button-container-top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        #button-container-bottom-center {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .button {
+            background-color: pink; 
+            color:white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 0 10px;
+        }   
+</style>
+
+</head>
+<body>
+    <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKy5BbZG_BuFvZ76iSsRyEhNtSvcLDKg8Siw&usqp=CAU">
+     <!-- <div id="restaurantletter">A Restaurant That Only Serves Delicious Food</div> -->
+     <div id="header">
+        <nav>
+            <a href="#contact">Contact</a>
+            <a href="#menu">Our Menu</a>
+            <a href="#about">About</a>
+            <a href="#Maps">Maps</a>
+        </nav>
+    </div>
+    <div id="main-content">
+    <div id="restaurantletter">A Restaurant That Only Serves Delicious Food</div>
+    </div>
+     <div id="button-container-top-right">
+        <button id="button">Order</button>
+    </div>
+    
+    <div id="button-container-bottom-center">
+        <button class="button">Read Our Menu</button>
+    </div>
+
+</body>
+</html>
