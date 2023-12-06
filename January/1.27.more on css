@@ -1,1 +1,84 @@
+1.Why is it called a pseudo-class?
 
+:hover:
+Selects and styles an element when the user hovers over it.
+a:hover {
+  color: red;
+}
+
+:first-child:
+Selects and styles the first child element of its parent.
+li:first-child {
+  font-weight: bold;
+}
+
+:nth-child():
+Selects and styles elements based on their position within a parent.
+li:nth-child(odd) {
+  background-color: lightgray;
+}
+:focus:
+
+Selects and styles an element when it receives focus (e.g., when a form element is clicked).
+input:focus {
+  border: 2px solid blue;
+}
+
+2.What are gradients in CSS?
+
+Linear Gradients:
+
+Linear gradients create a transition effect along a straight line, typically from one color to another.
+css
+Copy code
+/* Example of a linear gradient from red to blue */
+.element {
+  background: linear-gradient(to right, red, blue);
+}
+In this example, the linear gradient starts from the left (specified by to right) with the color red and transitions to blue.
+
+Radial Gradients:
+Radial gradients create a transition effect from the center of a shape to its edges.
+
+.element {
+  background: radial-gradient(yellow, green);
+}
+In this example, the radial gradient starts from the center and transitions from yellow to green.
+
+Directional Gradients:
+You can control the direction of a linear gradient by specifying keywords like to right, to left, to top, or to bottom.
+.element {
+  background: linear-gradient(to bottom, pink, purple);
+}
+
+Multiple Color Stops:
+Gradients can have multiple color stops, allowing for more complex color transitions.
+.element {
+  background: linear-gradient(to right, red, yellow, green, blue);
+}
+
+3.What are different types of transitions in CSS?
+
+Linear Gradients:
+Linear gradients create a transition effect along a straight line, typically from one color to another.
+.element {
+  background: linear-gradient(to right, red, blue);
+}
+
+Radial Gradients:
+Radial gradients create a transition effect from the center of a shape to its edges.
+.element {
+  background: radial-gradient(yellow, green);
+}
+
+Directional Gradients:
+You can control the direction of a linear gradient by specifying keywords like to right, to left, to top, or to bottom.
+.element {
+  background: linear-gradient(to bottom, pink, purple);
+}
+
+Multiple Color Stops:
+Gradients can have multiple color stops, allowing for more complex color transitions.
+.element {
+  background: linear-gradient(to right, red, yellow, green, blue);
+}
