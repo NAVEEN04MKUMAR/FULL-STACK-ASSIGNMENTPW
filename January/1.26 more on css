@@ -1,1 +1,81 @@
+1.What is padding and margin and when do you use them?
+padding:
+Purpose: Padding is the space between the content of an element and its border.
+When to use: Use padding when you want to create space inside an element, pushing the content away from the element's borders.
+
+.example {
+  padding: 10px;
+}
+Margin:
+
+Purpose: Margin is the space outside the border of an element.
+When to use: Use margin when you want to create space around an element, pushing it away from neighboring elements.
+
+.example {
+  margin: 10px;
+}
+
+2. What is diplay property and explain diplay inline,block,inline block?
+Inline:
+Description: Inline elements do not start on a new line and only take up as much width as necessary.
+They flow within the content and do not create a line break after the element.
+Examples: <span>, <a>, <strong>, <em>
+span {
+  display: inline;
+}
+
+Block:
+Description: Block elements always start on a new line and take up the full width available.
+They create a "block" that extends the full width of their containing element.
+Examples: <div>, <p>, <h1> to <h6>
+div {
+  display: block;
+}
+
+Inline-Block:
+Description: Inline-block elements are a combination of inline and block elements.
+They do not start on a new line but can have a width and height, and they respect top and bottom margins and paddings.
+Examples: <img>, <button>
+img {
+  display: inline-block;
+}
+
+3.Explain minheight, minwidth, maxheight, and maxwidth in CSS:
+min-height:
+Description: Specifies the minimum height an element can have.
+Usage: Prevents an element from becoming smaller than the specified value, even if its content is smaller or if the container is smaller.
+Example:
+.box {
+  min-height: 100px;
+}
+min-width:
+Description: Specifies the minimum width an element can have.
+Usage: Prevents an element from becoming narrower than the specified value, even if its content is narrower or if the container is narrower.
+Example:
+.box {
+  min-width: 200px;
+}
+
+max-height:
+Description: Specifies the maximum height an element can have.
+Usage: Prevents an element from becoming taller than the specified value, even if its content or the container size would allow it to be taller.
+Example:
+.box {
+  max-height: 300px;
+}
+
+max-width:
+Description: Specifies the maximum width an element can have.
+Usage: Prevents an element from becoming wider than the specified value, even if its content or the container size would allow it to be wider.
+Example:
+.box {
+  max-width: 400px;
+}
+
+
+
+
+
+
+
 
