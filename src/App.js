@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
+import Instragramlogo from './component/instragramlogo';
+// import Signup from './component/Signup';
+// import Login from './component/Login';
+import Togglebutton from './component/Togglebutton';
+import Loginform from './component/Loginform';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+
+    const [signupdata, setSignupData]=useState(false);
+
+    const toggleView=()=>{
+    setSignupData(!signupdata);
+};
+
+    return (
+        <div className="App">
+            <header className="app-header">
+                <Instragramlogo />
+                <Togglebutton onClick={toggleView}
+                text={signupdata?'Switch to Login':'Switch to Signup'}/>
+            {/* {signupdata ? <Signup /> : <Login />} */}
+            <Loginform/>
+            </header>
+        </div>
+    );
 }
 
 export default App;
