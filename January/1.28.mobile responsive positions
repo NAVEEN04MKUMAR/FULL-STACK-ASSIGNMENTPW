@@ -1,1 +1,50 @@
 
+
+1."What are the media queries in CSS and their use case
+Media queries in CSS allow you to apply styles to a document based on various characteristics of the device or viewport, such as its width, height, or resolution.
+Media queries are essential for creating responsive web designs that adapt to different screen sizes and devices. 
+
+2.Difference between min-width and max-width in media queries in CSS
+max-width and min-width: Specify the maximum and minimum width of the viewport.
+Example:
+@media screen and (max-width: 600px) {
+  /* Styles for screens with a width up to 600 pixels */
+}
+Example:
+@media screen and (min-width: 600px) {
+  /* Styles for screens with minimum 600 pixels */
+}
+
+3.Explain float property and clear property in CSS with examples
+a) Float Property:
+The float property in CSS is used to position an element to the left or right within its containing element, allowing content to flow around it.
+Syntax:
+.element {
+  float: left | right | none | inherit;
+}
+left: The element floats to the left.
+right: The element floats to the right.
+none: The element does not float. This is the default value.
+inherit: The element inherits the float value from its parent.
+
+b) Clear Property:
+The clear property is used to control the behavior of an element concerning the floated elements. It specifies whether an element should be moved below (cleared) the floated elements that precede it.
+Syntax:
+.element {
+  clear: none | left | right | both | inherit;
+}
+none: No clearing. The element can be positioned next to both left and right-floated elements.
+left: The element is moved below any left-floated elements.
+right: The element is moved below any right-floated elements.
+both: The element is moved below any left and right-floated elements.
+inherit: The element inherits the clear value from its parent.
+
+
+
+
+
+
+
+
+
+
