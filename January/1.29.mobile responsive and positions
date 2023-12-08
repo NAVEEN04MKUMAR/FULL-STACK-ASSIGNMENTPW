@@ -1,1 +1,100 @@
 
+What is position property in CSS and its type
+In CSS, the position property is used to specify the positioning method of an element within its containing element.
+*static (Default):
+*relative
+*absolute
+*fixed
+*sticky
+
+How many types of positioning are there in CSS
+
+static (Default):
+Elements with position: static; are positioned in the normal flow of the document.
+The top, right, bottom, and left properties have no effect when an element is positioned statically.
+.static-example {
+  position: static;
+}
+
+relative:
+Elements with position: relative; are positioned relative to their normal position in the document flow.
+The element can be moved using the top, right, bottom, and left properties.
+.relative-example {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+absolute:
+Elements with position: absolute; are removed from the normal document flow and positioned relative to the nearest positioned ancestor.
+If there is no positioned ancestor, it is positioned relative to the initial containing block (usually the <html> element).
+The top, right, bottom, and left properties are used to position the element.
+.absolute-example {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+fixed:
+Elements with position: fixed; are removed from the normal document flow and are positioned relative to the browser window.
+They do not move when the page is scrolled.
+The top, right, bottom, and left properties are used to position the element.
+.fixed-example {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+sticky:
+Elements with position: sticky; are a hybrid of relative and fixed positioning.
+The element is treated as relative positioned until it crosses a specified point, then it is treated as fixed positioned.
+.sticky-example {
+  position: sticky;
+  top: 0;
+}
+
+What is Z-index and why to use it?
+z-index is a CSS property that specifies the stack order of positioned elements.
+It controls the vertical stacking order of elements that overlap in the same containing element.
+Elements with a higher z-index value are displayed above elements with lower z-index values.
+Syntax:
+.element {
+  z-index: number | auto | inherit;
+}
+number: A positive or negative integer that determines the stacking order. Higher values are stacked above lower values.
+auto (default): The browser determines the stacking order based on the order of elements in the HTML and their positioning properties.
+inherit: The element inherits the z-index value from its parent.
+Example:
+.element1 {
+  z-index: 2;
+}
+
+.element2 {
+  z-index: 1;
+}
+In this example, element1 would be displayed above element2 because it has a higher z-index value.
+
+Why Use z-index?
+Overlapping Elements:
+When elements overlap, the z-index property allows you to control which element appears on top.
+For example, in a layered navigation menu, you may want sub-menus to appear above the main content.
+.submenu {
+  z-index: 100;
+}
+Layered Layouts:
+In complex layouts, especially those involving absolute or fixed positioning, the z-index property helps in creating layered structures.
+This is useful for creating visually appealing designs with elements appearing in front of or behind one another.
+.header {
+  z-index: 10;
+}
+.main-content {
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
