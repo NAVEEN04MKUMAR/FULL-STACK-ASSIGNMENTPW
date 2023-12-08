@@ -426,12 +426,137 @@ additembutton.addEventListener('click',function(){
 
 
 // 21. TODO App Create a simple to-do app to add TODO items to the list through an input field and a button.
- 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #todo-container {
+      max-width: 400px;
+      margin: 50px auto;
+    }
+
+    #todo-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .todo-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+    }
+
+    .delete-btn {
+      cursor: pointer;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+  <title>TODO App</title>
+</head>
+<body>
+
+  <div id="todo-container">
+    <h2>TODO App</h2>
+    <input type="text" id="todo-input" placeholder="Add a new TODO">
+    <button onclick="addtodo()">Add TODO</button>
+    <ul id="todo-list"></ul>
+  </div>
+<script>
+    function addtodo(){
+        const todoinput=document.getElementById('todo-input');
+        const todolist=document.getElementById('todo-list');
+
+        const todoitem=document.createElement('li');
+        todoitem.className='todo-item';
+
+        
+        // const todotext=document.createTextNode(todoinput.value);
+        // todoitem.appendChild(todotext);
+
+        const deletebtn=document.createElement('span');
+       deletebtn.className='delete-item';
+        deletebtn.innerHTML='Delete';
+        deletebtn.onclick=function(){
+            todolist.removeChild(todoitem);
+        };
+
+          todoitem.appendChild(deletebtn);
+          todolist.appendChild(todoitem);
+        
+    }
+
+
+</script>
+</body>
+</html>
+      
 // 22. Progress Bar Create a progress bar that fills up as the user scrolls down the page.
 
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      height: 2000px; 
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #eee;
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    #progress-bar {
+      height: 100%;
+      width: 0;
+      background-color: #4caf50;
+      transition: width 0.3s ease;
+    }
+  </style>
+  <title>Scroll Progress Bar</title>
+</head>
+<body>
+
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        const progresscontainer=document.getElementById('progress-continer');
+        const progressbar=document.getElementById('progress-bar');
+function updateprogressbar() {
+        const scrolltop=document.documentElement.scrollTop;
+        const scrollheight=document.documentElement.scrollheight-window.innerHeight;   
+        const progress=(scrolltop/scrollheight)*100;
+        progressbar.style.width=progress+'%';
+}
+        window.addEventListener('scroll',updateprogressbar);
+    });
+</script>
+</body>
+</html>
 
 
 // 23. Change the color on click Create a button that utilizes an array of colors and the Math.random method to change the background color of the page upon clicking.
