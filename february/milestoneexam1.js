@@ -268,11 +268,22 @@ console.log(`total rental cost for ${daysrented} days of ${cartype} car: Rs.${to
 // people sharing it. They require a function that takes in the cost of each dish and the number of people sharing
 // it and returns an object that contains the total bill and the bill to be paid by each person in the group.
 
+function calculatebill(costperdish, numberofpeople) {
+  if (isNaN(costperdish) || isNaN(numberofpeople) || costperdish <= 0 || numberofpeople <= 0) {
+    return "Invalid input. Please enter valid values for cost per dish and number of people.";
+  }
+  const totalbill = costperdish * numberofpeople;
+  const billperperson = totalbill / numberofpeople;
+  return {
+    totalbill: totalbill,
+    billperperson: billperperson,
+  };
+}
 
-
-
-
-
+const costperdish = 25;
+const numberofpeople = 4;
+const result = calculatebill(costperdish, numberofpeople);
+console.log(result);
 
 // 14. Calculate the final order price
 // A retail store needs to calculate the total cost of items in a customer's cart. A customer cart is an array of
@@ -326,10 +337,80 @@ console.log(`generate random number:${randomgenerator}`);
 // object with a keys name and balance. Write functions using object methods to update a customer's account
 // balance based on a deposit or withdrawal.
 
+function createcustomer(name,balance=0){
+    return {
+        name:name,
+        balance:balance,
+    
+deposit:function(amount){
+if(amount>0){
+    this.balance=+amount;
+    return `whatever $${amount} we are put in that amount will store into the ${this.balance}`;
+}
+else{
+    return `please enter a positive value`;
+}
+},
+withdraw:function(amount){
+    if(amount>0 && amount<=this.balance){
+        this.balance -= amount;
+        return `successfully we withdraw the ${amount} then remaining balance ${this.balance}`;
+    }
+    else if(amount>this.balance){
+        return `insuffient bank balance`;
+    }
+    else{
+       return `please enter a positive value`;
+    }
+},
+           checkBalance:function() {
+            return `current balance for ${this.name}:${this.balance}`;
+           },
+    };
+};
+
+// const customer=createcustomer('naveen',10000000);
+// console.log(customer.checkBalance());
+// console.log(customer.deposit(100));
+// console.log(customer.withdraw(200));
+
+// console.log(customer.deposit(500));    
+// console.log(customer.withdraw(200));
+
+const customer1=createcustomer('naveen',1000);
+console.log(customer1.deposit(5000));    
+console.log(customer1.withdraw(2000));
+console.log(customer1.deposit(5000));    
+
 // 18. Change Text on Button click.
 // Create a simple HTML page with a heading and a button. The initial text must be “The most affordable learning
 // platform”, use JavaScript to change the heading text to “PW Skills” when the button is clicked. The button must
 // toggle the text of a heading between "The most affordable learning platform" and "PW Skills" on each click.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Text on Button Click</title>
+</head>
+<body>
+
+  <h1 id="heading">The most affordable learning platform</h1>
+  <button onclick="toggleText()">Toggle Text</button>
+  <script>
+    function toggletext(){
+    const heading=document.getElementById("heading");
+    if(heading.innerText="the most affordable learning platform"){
+        heading.innerText="pw skills";
+    }
+    else if(heading.innerText="pw skills") {
+        heading.innerText="the most affordable learning platform";
+    }
+}
+</script>
+</body>
+</html>
 
 // 19. Validate Password
 // You are building a login form for a website and need to validate user input using JavaScript. The form has two
@@ -561,12 +642,30 @@ function updateprogressbar() {
 
 // 23. Change the color on click Create a button that utilizes an array of colors and the Math.random method to change the background color of the page upon clicking.
 
-
-
-
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Color on Click</title>
+  <style>
+    body {
+      transition: background-color 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="changeColor()">Change Color</button>
+  <script>
+const colors=['#ff5733', '#33ff57', '#5733ff', '#ff33a1', '#33a1ff', '#a1ff33'];
+function changecolor(){
+    const randomcolor=colors[Math.floor(Math.random()*colors.length)];
+    document.body.style.backgroundColor=randomcolor;
+}
+</script>
+    
+</body>
+</html>
 
 // 24. Text Highlighting
 // Using the Document Object Model (DOM), highlight all words in a paragraph element that are greater than 8 characters.
